@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+
+body {
+    margin : 0px;
+    font-family: sans-serif;
+    /* font-family: 'Short Stack', cursive; */
+    background-color: #F4F7F6; 
+    display: grid; /* pour le BOUTON RETOUR */
+    grid-template-columns: auto 0px;
+}
+
+
+section {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+
+/* COURS */
+[style*="--aspect-ratio"] > :first-child {
+    width: 100%;
+  }
+  [style*="--aspect-ratio"] > img {  
+    height: auto;
+  } 
+  @supports (--custom:property) {
+    [style*="--aspect-ratio"] {
+      position: relative;
+    }
+    [style*="--aspect-ratio"]::before {
+      content: "";
+      display: block;
+      padding-bottom: calc(100% / (var(--aspect-ratio)));
+    }  
+    [style*="--aspect-ratio"] > :first-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }  
+  }
+  
+
+/* CLASSES */
+.separator {
+	width : 100px;
+	height : 2px;
+    margin : 15px auto;
+	display : block;
+	background-color : #999999;
+	}
+
+.intro, .introa {
+	font-size: 1.2em; 
+    text-align : justify;
+    line-height: 1.5em;
+    /* word-spacing: 0.3em; */
+	width : 80%;
+	margin : auto;
+}
+
+
+/* MEDIA QUERIES */
+@media all and (max-width : 1000px){
+    
+    header h2 {width : 90%;}
+    header h2 {width : 90%;}
+    h3 {width : 95%; font-size : 1.2em;}
+    .contener {width : 85%; margin : auto;}
+    .intro {width : 90%; margin: 10px auto;}
+    .introa {width : 90%; margin: 10px auto;}
+    .bienvenue {width : 90%}
+    .picture-project h3 {width: 100%; padding : 0% 15%; font-size: 1.2em; text-align: center; }
+}
